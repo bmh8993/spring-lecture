@@ -1,10 +1,12 @@
 package lectureBasic.core.member
 
 class Member(
+
     val id: Long,
     val name: String,
     val grade: Grade
 ) {
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false

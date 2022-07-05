@@ -5,7 +5,9 @@ import lectureBasic.core.member.MemberRepository
 
 class MemoryMemberRepository : MemberRepository {
 
-    private val store: HashMap<Long, Member> = HashMap()
+    companion object {
+        private val store: HashMap<Long, Member> = HashMap()
+    }
 
     override fun save(member: Member) {
         store[member.id] = member
