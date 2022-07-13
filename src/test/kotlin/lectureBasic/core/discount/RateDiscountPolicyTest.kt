@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 internal class RateDiscountPolicyTest {
 
-    val discountPolicy: RateDiscountPolicy = RateDiscountPolicy()
+    private val discountPolicy: RateDiscountPolicy = RateDiscountPolicy()
 
     @Test
     @DisplayName("VIP는 10% 할인이 적용되어야 한다.")

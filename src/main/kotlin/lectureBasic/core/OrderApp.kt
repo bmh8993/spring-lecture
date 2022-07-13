@@ -3,14 +3,12 @@ package lectureBasic.core
 import lectureBasic.core.member.Grade
 import lectureBasic.core.member.Member
 import lectureBasic.core.member.MemberService
-import lectureBasic.core.member.service.MemberServiceImpl
 import lectureBasic.core.order.OrderService
-import lectureBasic.core.order.service.OrderServiceImpl
 
 fun main(args: Array<String>) {
-
-    val memberService: MemberService = MemberServiceImpl()
-    val orderService: OrderService = OrderServiceImpl()
+    val appConfig = AppConfig()
+    val memberService: MemberService = appConfig.memberService()
+    val orderService: OrderService = appConfig.orderService()
 
     val memberId = 1L
     val member = Member(memberId, "memberA", Grade.VIP)

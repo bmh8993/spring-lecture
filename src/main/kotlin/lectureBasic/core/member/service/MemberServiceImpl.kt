@@ -1,11 +1,10 @@
-package lectureBasic.core.member.service
-
 import lectureBasic.core.member.Member
 import lectureBasic.core.member.MemberRepository
 import lectureBasic.core.member.MemberService
-import lectureBasic.core.member.repository.MemoryMemberRepository
 
-class MemberServiceImpl : MemberService {
+class MemberServiceImpl(
+    private val memberRepository: MemberRepository
+) : MemberService {
 
     /*
     * MemberServiceImpl은 MemberService(인터페이스)에 의존하고 있음
@@ -14,7 +13,8 @@ class MemberServiceImpl : MemberService {
     * -> 변경에 매우 취약하다. 즉, DIP를 위반하고 있다.
     * */
 
-    private val memberRepository: MemberRepository = MemoryMemberRepository()
+//    인터페이스와 구현체 모두에 의존하고 있는 코드 -> 생성자 주입을 통해서 해결한다.
+//    private val memberRepository: MemberRepository = MemoryMemberRepository()
 
     override fun join(member: Member) {
         memberRepository.save(member)
