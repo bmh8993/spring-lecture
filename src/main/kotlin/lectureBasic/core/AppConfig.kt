@@ -2,7 +2,7 @@ package lectureBasic.core
 
 import MemberServiceImpl
 import lectureBasic.core.discount.DiscountPolicy
-import lectureBasic.core.discount.FixDiscountPolicy
+import lectureBasic.core.discount.RateDiscountPolicy
 import lectureBasic.core.member.MemberRepository
 import lectureBasic.core.member.MemberService
 import lectureBasic.core.member.repository.MemoryMemberRepository
@@ -20,7 +20,8 @@ class AppConfig {
      * - 변수에 객체를 할당하여 해당 변수를 파라미터로 넘겨주었다. 구현을 바꾸게 된다면 해당 객체만 교체하면 된다.
      */
     private val memberRepository: MemberRepository = MemoryMemberRepository()
-    private val discountPolicy: DiscountPolicy = FixDiscountPolicy()
+//    private val discountPolicy: DiscountPolicy = FixDiscountPolicy()
+    private val discountPolicy: DiscountPolicy = RateDiscountPolicy()
 
     fun memberService(): MemberService {
         return MemberServiceImpl(memberRepository)
