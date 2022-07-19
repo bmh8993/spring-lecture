@@ -23,4 +23,9 @@ class MemberServiceImpl(
     override fun findMember(memberId: Long): Member {
         return memberRepository.findById(memberId)
     }
+
+    // 테스트용
+    fun getMemberRepository(): MemberRepository {
+        return memberRepository
+    }
 }

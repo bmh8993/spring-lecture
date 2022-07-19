@@ -13,16 +13,28 @@ import org.springframework.context.annotation.Configuration
 
 @Configuration
 class AppConfig {
-    private val memberRepository: MemberRepository = MemoryMemberRepository()
-    private val discountPolicy: DiscountPolicy = RateDiscountPolicy()
 
     @Bean
     fun memberService(): MemberService {
-        return MemberServiceImpl(memberRepository)
+        println("call AppConfig.memberService")
+        return MemberServiceImpl(memberRepository())
     }
 
     @Bean
     fun orderService(): OrderService {
-        return OrderServiceImpl(memberRepository, discountPolicy)
+        println("call AppConfig.orderService")
+        return OrderServiceImpl(memberRepository(), discountPolicy())
+    }
+
+    @Bean
+    fun memberRepository(): MemberRepository {
+        println("call AppConfig.memberRepository")
+        return MemoryMemberRepository()
+    }
+
+    @Bean
+    fun discountPolicy(): DiscountPolicy {
+        println("call AppConfig.discountPolicy")
+        return RateDiscountPolicy()
     }
 }
