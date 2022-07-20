@@ -4,7 +4,9 @@ import lectureBasic.core.discount.DiscountPolicy
 import lectureBasic.core.member.MemberRepository
 import lectureBasic.core.order.Order
 import lectureBasic.core.order.OrderService
+import org.springframework.stereotype.Component
 
+@Component
 class OrderServiceImpl(
     private val memberRepository: MemberRepository,
     private val discountPolicy: DiscountPolicy

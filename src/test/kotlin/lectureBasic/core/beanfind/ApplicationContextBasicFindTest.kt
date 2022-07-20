@@ -1,6 +1,6 @@
 package lectureBasic.core.beanfind
 
-import MemberServiceImpl
+import lectureBasic.core.member.service.MemberServiceImpl
 import lectureBasic.core.AppConfig
 import lectureBasic.core.member.MemberService
 import org.assertj.core.api.Assertions.*

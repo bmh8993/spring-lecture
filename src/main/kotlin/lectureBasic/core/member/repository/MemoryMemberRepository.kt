@@ -2,7 +2,9 @@ package lectureBasic.core.member.repository
 
 import lectureBasic.core.member.Member
 import lectureBasic.core.member.MemberRepository
+import org.springframework.stereotype.Component
 
+@Component
 class MemoryMemberRepository : MemberRepository {
 
     companion object {

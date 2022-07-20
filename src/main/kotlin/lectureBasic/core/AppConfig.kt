@@ -1,6 +1,6 @@
 package lectureBasic.core
 
-import MemberServiceImpl
+import lectureBasic.core.member.service.MemberServiceImpl
 import lectureBasic.core.discount.DiscountPolicy
 import lectureBasic.core.discount.RateDiscountPolicy
 import lectureBasic.core.member.MemberRepository

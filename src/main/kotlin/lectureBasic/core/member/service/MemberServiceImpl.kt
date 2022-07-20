@@ -1,7 +1,11 @@
+package lectureBasic.core.member.service
+
 import lectureBasic.core.member.Member
 import lectureBasic.core.member.MemberRepository
 import lectureBasic.core.member.MemberService
+import org.springframework.stereotype.Component
 
+@Component
 class MemberServiceImpl(
     private val memberRepository: MemberRepository
 ) : MemberService {
