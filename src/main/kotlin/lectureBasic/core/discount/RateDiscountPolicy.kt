@@ -1,10 +1,12 @@
 package lectureBasic.core.discount
 
+import lectureBasic.core.annotation.MainDiscountPolicy
 import lectureBasic.core.member.Grade
 import lectureBasic.core.member.Member
 import org.springframework.stereotype.Component
 
 @Component
+@MainDiscountPolicy
 class RateDiscountPolicy : DiscountPolicy {
 
     private val discountPercent: Int = 10

@@ -6,12 +6,14 @@ import lectureBasic.core.member.service.MemberServiceImpl
 import lectureBasic.core.order.service.OrderServiceImpl
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.ApplicationContext
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 class ConfigurationSingletonTest {
 
     @Test
+    @Qualifier
     fun configurationTest() {
         val ac: ApplicationContext = AnnotationConfigApplicationContext(AppConfig::class.java)
 
