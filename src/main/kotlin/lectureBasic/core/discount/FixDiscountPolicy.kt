@@ -5,8 +5,9 @@ import lectureBasic.core.member.Member
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 
-@Component
-@Primary
+//@Component
+//@Primary
+// @Component를 제거하는 대신 DiscountPolicyConfig를 만들어서 빈으로 등록
 class FixDiscountPolicy : DiscountPolicy {
 
     private val discountFixAmount = 1000 // 1000원 할인
