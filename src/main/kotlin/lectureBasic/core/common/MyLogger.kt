@@ -1,19 +1,19 @@
 package lectureBasic.core.common
 
 import org.springframework.context.annotation.Scope
+import org.springframework.context.annotation.ScopedProxyMode
 import org.springframework.stereotype.Component
 import java.util.UUID
 import javax.annotation.PreDestroy
 
 @Component
-@Scope(value = "request")
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 class MyLogger {
 
-    private lateinit var uuid: String
+    private var uuid = UUID.randomUUID().toString()
     private lateinit var requestUrl: String
 
     init {
-        uuid = UUID.randomUUID().toString()
         println("[$uuid] request scope bean create $this")
     }
 

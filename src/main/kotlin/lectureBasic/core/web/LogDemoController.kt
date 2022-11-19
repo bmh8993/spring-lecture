@@ -11,13 +11,17 @@ import javax.servlet.http.HttpServletRequest
 @Controller
 class LogDemoController(
     private val logDemoService: LogDemoService,
-    private val myLoggerProvider: ObjectProvider<MyLogger>
+//    private val myLoggerProvider: ObjectProvider<MyLogger>
+    private val myLogger: MyLogger
 ) {
+    init {
+        println("myLogger: ${myLogger.javaClass}")
+    }
     @RequestMapping("log-demo")
     @ResponseBody
     fun logDemo(request: HttpServletRequest): String {
         val requestUrl = request.requestURL.toString()
-        val myLogger = myLoggerProvider.getObject()
+//        val myLogger = myLoggerProvider.getObject()
 
         myLogger.setRequestUrl(requestUrl)
 
