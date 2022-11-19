@@ -6,10 +6,11 @@ import org.springframework.stereotype.Service
 
 @Service
 class LogDemoService(
-    val myLoggerProvider: ObjectProvider<MyLogger>
+//    private val myLoggerProvider: ObjectProvider<MyLogger>
+    private val myLogger: MyLogger
 ) {
     fun logic(id: String) {
-        val myLogger = myLoggerProvider.getObject()
+//        val myLogger = myLoggerProvider.getObject()
         myLogger.log("service Id = $id")
     }
 }
