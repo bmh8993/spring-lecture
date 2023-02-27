@@ -1,2 +1,5 @@
 ### 기본 테스트
 GET http://localhost:8080/hello
+
+### reqeustParmeters 추가
+GET http://localhost:8080/hello?username=kim
