@@ -3,3 +3,12 @@ GET http://localhost:8080/hello
 
 ### reqeustParmeters 추가
 GET http://localhost:8080/hello?username=kim
+
+### reqeust-header
+GET http://localhost:8080/request-header?username=kim
+
+### request-param 파라미터 전송 기능
+GET http://localhost:8080/request-param?username=hello&age=20
+
+### request-param 동일한 파라미터 전송 가능
+GET http://localhost:8080/request-param?username=hello&username=kim&age=20
