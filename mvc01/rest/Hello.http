@@ -18,3 +18,12 @@ POST http://localhost:8080/request-body-string
 Content-Type: text/plain
 
 Hello, World!
+
+### request-body-json
+POST http://localhost:8080/request-body-json
+Content-Type: application/json
+
+{
+  "username": "zayden",
+  "age": 20
+}
