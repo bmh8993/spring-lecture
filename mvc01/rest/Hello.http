@@ -12,3 +12,9 @@ GET http://localhost:8080/request-param?username=hello&age=20
 
 ### request-param 동일한 파라미터 전송 가능
 GET http://localhost:8080/request-param?username=hello&username=kim&age=20
+
+### request-body-string
+POST http://localhost:8080/request-body-string
+Content-Type: text/plain
+
+Hello, World!
