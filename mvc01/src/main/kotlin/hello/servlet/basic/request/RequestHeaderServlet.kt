@@ -1,4 +1,4 @@
-package hello.servlet.basic
+package hello.servlet.basic.request
 
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.Cookie

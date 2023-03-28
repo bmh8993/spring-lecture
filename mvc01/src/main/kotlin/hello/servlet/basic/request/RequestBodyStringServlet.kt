@@ -1,4 +1,4 @@
-package hello.servlet.basic
+package hello.servlet.basic.request
 
 import org.springframework.util.StreamUtils
 import java.nio.charset.StandardCharsets

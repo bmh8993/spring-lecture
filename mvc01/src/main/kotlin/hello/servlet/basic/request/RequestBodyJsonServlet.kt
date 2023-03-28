@@ -1,10 +1,7 @@
-package hello.servlet.basic
+package hello.servlet.basic.request
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.KotlinFeature
-import com.fasterxml.jackson.module.kotlin.KotlinModule
-import com.fasterxml.jackson.module.kotlin.SingletonSupport
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import hello.servlet.basic.HelloData
 import org.springframework.util.StreamUtils
 import java.nio.charset.StandardCharsets
 import javax.servlet.ServletInputStream
