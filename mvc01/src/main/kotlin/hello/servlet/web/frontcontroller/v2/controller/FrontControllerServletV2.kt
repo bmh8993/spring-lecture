@@ -1,6 +1,5 @@
 package hello.servlet.web.frontcontroller.v2.controller
 
-import hello.servlet.web.frontcontroller.v1.ControllerV1
 import hello.servlet.web.frontcontroller.v2.ControllerV2
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet

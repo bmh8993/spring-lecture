@@ -3,5 +3,10 @@ package hello.servlet.web.frontcontroller
 class ModelView(
     val viewName: String,
 ) {
-    val model = hashMapOf<String, Any>()
+    var model: HashMap<String, Any> = hashMapOf()
+        private set
+
+    fun changeModel(model: HashMap<String, Any>) {
+        this.model = model
+    }
 }

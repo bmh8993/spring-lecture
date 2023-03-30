@@ -1,9 +1,6 @@
 package hello.servlet.web.frontcontroller.v4.controller
 
 import hello.servlet.web.frontcontroller.MyView
-import hello.servlet.web.frontcontroller.v1.ControllerV1
-import hello.servlet.web.frontcontroller.v2.ControllerV2
-import hello.servlet.web.frontcontroller.v3.ControllerV3
 import hello.servlet.web.frontcontroller.v4.ControllerV4
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet
@@ -33,7 +30,7 @@ class FrontControllerServletV4 : HttpServlet() {
         }
 
         val paramMap = createParamMap(request)
-        val model = hashMapOf <String, Any>()
+        val model = hashMapOf<String, Any>()
 
         val viewName = controller.process(paramMap, model)
         val view = viewResolver(viewName)
