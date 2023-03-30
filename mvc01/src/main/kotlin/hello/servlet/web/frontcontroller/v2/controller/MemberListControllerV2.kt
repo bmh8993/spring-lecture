@@ -1,21 +1,21 @@
-package hello.servlet.web.frontcontroller.v1.controller
+package hello.servlet.web.frontcontroller.v2.controller
 
 import hello.servlet.domain.member.MemberRepository
+import hello.servlet.web.frontcontroller.MyView
 import hello.servlet.web.frontcontroller.v1.ControllerV1
+import hello.servlet.web.frontcontroller.v2.ControllerV2
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-class MemberListControllerV1 : ControllerV1 {
+class MemberListControllerV2 : ControllerV2 {
     private val memberRepository = MemberRepository.instance
 
-    override fun process(request: HttpServletRequest, response: HttpServletResponse) {
+    override fun process(request: HttpServletRequest, response: HttpServletResponse): MyView {
         println("MvcMemberListServlet.process")
         val members = memberRepository.findAll()
 
         request.setAttribute("members", members)
 
-        val viewPath = "/WEB-INF/views/members.jsp"
-        val dispatcher = request.getRequestDispatcher(viewPath)
-        dispatcher.forward(request, response)
+        return MyView("/WEB-INF/views/members.jsp")
     }
 }
