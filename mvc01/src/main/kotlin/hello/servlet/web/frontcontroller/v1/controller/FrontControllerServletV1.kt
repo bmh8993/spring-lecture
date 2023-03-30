@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-@WebServlet(name = "frontControllerServletV1", urlPatterns = ["/fron-controller/v1/*"])
+@WebServlet(name = "frontControllerServletV1", urlPatterns = ["/front-controller/v1/*"])
 class FrontControllerServletV1 : HttpServlet() {
 
     private val controllerMap: HashMap<String, ControllerV1> = hashMapOf()
