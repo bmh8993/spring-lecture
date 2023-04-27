@@ -9,6 +9,7 @@ import hello.servlet.web.frontcontroller.v4.controller.MemberFormControllerV4
 import hello.servlet.web.frontcontroller.v4.controller.MemberListControllerV4
 import hello.servlet.web.frontcontroller.v4.controller.MemberSaveControllerV4
 import hello.servlet.web.frontcontroller.v5.adapter.ControllerV3HandlerAdapter
+import hello.servlet.web.frontcontroller.v5.adapter.ControllerV4HandlerAdapter
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
@@ -39,7 +40,7 @@ class FrontControllerServletV5 : HttpServlet() {
 
     private fun initHandlerAdapters() {
         handlerAdapters.add(ControllerV3HandlerAdapter())
-        handlerAdapters.add(ControllerV3HandlerAdapter())
+        handlerAdapters.add(ControllerV4HandlerAdapter())
     }
 
     override fun service(request: HttpServletRequest, response: HttpServletResponse) {
